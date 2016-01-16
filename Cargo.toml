@@ -1,0 +1,13 @@
+[package]
+name = "scale_server"
+version = "0.1.0"
+authors = ["Brian Abreu <brian@nuts.com>"]
+
+[dependencies]
+websocket = "0.14.0"
+docopt = "0.6"
+rustc-serialize = "0.3"
+url = "*"
+log = "*"
+env_logger = "*"
+time = "*"
