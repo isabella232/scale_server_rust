@@ -99,15 +99,10 @@ impl ScaleServer {
             let scale_server = scale_server.clone();
             let connection = try!(server.accept());
 
-            thread::spawn(move || {
-                match ScaleServer::accept_websocket_connection(scale_server, connection) {
-                    Ok(_) => (),
-                    Err(err) => {
-                        error!("error establishing connection: {}", err);
-                        return;
-                    }
-                }
-            });
+            match ScaleServer::accept_websocket_connection(scale_server, connection) {
+                Ok(_) => (),
+                Err(err) => error!("error establishing connection: {}", err),
+            }
         }
     }
 
