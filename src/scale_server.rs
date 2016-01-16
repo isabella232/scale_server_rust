@@ -214,7 +214,7 @@ impl ScaleServer {
 
     fn remove_connection(&mut self, connection_id: &ConnectionId) {
         for connection in self.connections.remove(connection_id) {
-            info!("close conn_id={}", &connection);
+            info!("close {}", &connection);
         }
     }
 
