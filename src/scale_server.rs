@@ -204,9 +204,11 @@ impl ScaleServer {
                       -> ConnectionId {
         let id = self.next_connection_id;
         let connection = Connection::new(id, filter_scale_ids, sender);
+
         info!("open {}", &connection);
         self.connections.insert(id, connection);
         self.next_connection_id += 1;
+
         id
     }
 
