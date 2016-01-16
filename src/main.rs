@@ -26,8 +26,8 @@ Usage:
   scale_server -h
 
 Options:
-  -w ADDR, --websocket-listen-addr=ADDR  Listen for shit [default: 0.0.0.0:6002].
-  -s ADDR, --scale-listen-addr=ADDR      Message [default: 0.0.0.0:6002].
+  -w ADDR, --websocket-listen-addr=ADDR  Listen for websocket connections on [default: 0.0.0.0:6002].
+  -s ADDR, --scale-listen-addr=ADDR      Listen for udp scale packets on [default: 0.0.0.0:6002].
   -h, --help                             Print this message.
 ";
 
